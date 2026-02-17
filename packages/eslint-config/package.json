@@ -1,0 +1,10 @@
+{
+  "name": "@pairemancipation/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./base.js",
+  "dependencies": {
+    "eslint-plugin-security": "^3.0.0",
+    "eslint-plugin-no-unsanitized": "^4.1.0"
+  }
+}

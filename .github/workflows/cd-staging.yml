@@ -1,0 +1,37 @@
+name: CD Staging
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy-staging:
+    name: Deploy to Staging
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+      - run: npm ci
+      - run: npm run build
+
+      - name: Build Docker images
+        run: |
+          docker build -t pairemancipation-api:staging ./apps/backend --target production
+          docker build -t pairemancipation-front:staging ./apps/frontend --target production
+
+      - name: Trivy scan API image
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: 'pairemancipation-api:staging'
+          severity: 'CRITICAL'
+          exit-code: '1'
+
+      - name: Deploy to HDS hosting
+        run: |
+          echo "Deploying to ${{ secrets.STAGING_HOST }}"
+        env:
+          DEPLOY_KEY: ${{ secrets.STAGING_DEPLOY_KEY }}

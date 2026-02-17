@@ -32,13 +32,21 @@ yarn-error.log*
 Thumbs.db
 
 # Strapi
-backend/.tmp/
-backend/.cache/
-backend/exports/
+apps/backend/.tmp/
+apps/backend/.cache/
+apps/backend/exports/
+apps/backend/public/uploads/
 
 # Next.js
-frontend/.next/
-frontend/out/
+apps/frontend/.next/
+apps/frontend/out/
 
 # Docker
 docker-compose.override.yml
+
+# Turbo
+.turbo/
+
+# Package lock (managed at root)
+apps/*/package-lock.json
+packages/*/package-lock.json
