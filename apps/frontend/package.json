@@ -27,6 +27,8 @@
     "@fullcalendar/daygrid": "^6.1.0",
     "@fullcalendar/timegrid": "^6.1.0",
     "@fullcalendar/interaction": "^6.1.0",
+    "@fullcalendar/list": "^6.1.0",
+    "@fullcalendar/core": "^6.1.0",
     "date-fns": "^3.6.0",
     "lucide-react": "^0.441.0",
     "dompurify": "^3.1.0",
@@ -53,6 +55,7 @@
     "eslint": "^8.57.0",
     "eslint-config-next": "14.2.15",
     "eslint-config-prettier": "^9.1.0",
-    "vitest": "^2.1.0"
+    "vitest": "^2.1.0",
+    "jsdom": "^25.0.0"
   }
 }

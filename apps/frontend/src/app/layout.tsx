@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import '@/styles/globals.css';
+import { CookieConsent } from '@/components/rgpd/CookieConsent';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -30,6 +31,7 @@ export default function RootLayout({
           Aller au contenu principal
         </a>
         {children}
+        <CookieConsent />
       </body>
     </html>
   );
