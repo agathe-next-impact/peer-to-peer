@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ArrowLeft, MapPin, Calendar, Video, ExternalLink } from 'lucide-react';
 import { strapiFind } from '@/lib/strapi';
 import type { PublicEvent } from '@pairemancipation/shared-types';
+import StrapiBlocksRenderer from '@/components/content/StrapiBlocksRenderer';
 
 interface PageProps {
   params: { slug: string };
@@ -152,11 +153,7 @@ export default async function EventDetailPage({ params }: PageProps) {
         </header>
 
         {/* Description (Strapi Blocks) */}
-        <div className="prose prose-lg max-w-none">
-          <p className="text-muted-foreground">
-            Description à venir via le composant de rendu Strapi Blocks.
-          </p>
-        </div>
+        <StrapiBlocksRenderer content={event.description} />
 
         {event.tags && event.tags.length > 0 && (
           <footer className="mt-8 border-t pt-6">

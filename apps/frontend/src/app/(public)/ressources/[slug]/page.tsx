@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { strapiFind } from '@/lib/strapi';
 import type { KnowledgeBaseEntry } from '@pairemancipation/shared-types';
+import StrapiBlocksRenderer from '@/components/content/StrapiBlocksRenderer';
 
 interface PageProps {
   params: { slug: string };
@@ -76,9 +77,7 @@ export default async function RessourceDetailPage({ params }: PageProps) {
         </header>
 
         {/* Contenu Strapi Blocks */}
-        <div className="text-muted-foreground">
-          <p>Contenu à venir via le composant de rendu Strapi Blocks.</p>
-        </div>
+        <StrapiBlocksRenderer content={entry.content} />
 
         {entry.tags && entry.tags.length > 0 && (
           <footer className="not-prose mt-8 border-t pt-6">

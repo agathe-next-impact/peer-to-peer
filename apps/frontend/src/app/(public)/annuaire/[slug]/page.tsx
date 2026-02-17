@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ArrowLeft, MapPin, Phone, Mail, Globe, Clock } from 'lucide-react';
 import { strapiFind } from '@/lib/strapi';
 import type { Structure } from '@pairemancipation/shared-types';
+import StrapiBlocksRenderer from '@/components/content/StrapiBlocksRenderer';
 
 interface PageProps {
   params: { slug: string };
@@ -88,11 +89,7 @@ export default async function StructureDetailPage({ params }: PageProps) {
       <div className="grid gap-8 lg:grid-cols-3">
         <div className="lg:col-span-2">
           {/* Description (Strapi Blocks) */}
-          <div className="prose prose-lg max-w-none">
-            <p className="text-muted-foreground">
-              Description à venir via le composant de rendu Strapi Blocks.
-            </p>
-          </div>
+          <StrapiBlocksRenderer content={structure.description} />
 
           {structure.services && structure.services.length > 0 && (
             <div className="mt-8">
