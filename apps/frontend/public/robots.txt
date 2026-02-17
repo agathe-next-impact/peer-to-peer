@@ -1,0 +1,14 @@
+# Pairémancipation — robots.txt
+User-agent: *
+Allow: /
+
+# Zone privée — accès authentifié uniquement
+Disallow: /espace-prive/
+Disallow: /connexion
+Disallow: /inscription
+Disallow: /mot-de-passe-oublie
+
+# API
+Disallow: /api/
+
+Sitemap: https://pairemancipation.fr/sitemap.xml

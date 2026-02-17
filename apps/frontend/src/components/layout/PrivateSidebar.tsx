@@ -11,6 +11,7 @@ import {
   FileText,
   User,
   Heart,
+  Users,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useUIStore } from '@/stores/uiStore';
@@ -22,6 +23,7 @@ const navItems = [
   { label: 'Autoévaluation', href: '/espace-prive/autoevaluation', icon: ClipboardCheck },
   { label: 'Calendrier', href: '/espace-prive/calendrier', icon: Calendar },
   { label: 'Documents', href: '/espace-prive/documents', icon: FileText },
+  { label: 'Contributions', href: '/espace-prive/contributions', icon: Users },
   { label: 'Mon profil', href: '/espace-prive/profil', icon: User },
   { label: 'Rétablissement', href: '/espace-prive/retablissement', icon: Heart },
 ];

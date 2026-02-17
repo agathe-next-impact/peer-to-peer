@@ -41,7 +41,7 @@ export interface Structure extends StrapiEntity {
   name: string;
   slug: string;
   type: StructureType;
-  description: unknown;
+  description: unknown; // Strapi Blocks JSON — use StrapiBlocksRenderer
   address: Address;
   coordinates: Coordinates;
   phone: string | null;
