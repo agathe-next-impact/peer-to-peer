@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "self_assessments",
+  "info": {
+    "singularName": "self-assessment",
+    "pluralName": "self-assessments",
+    "displayName": "Auto-évaluation"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "template": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::assessment-template.assessment-template"
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "responses": {
+      "type": "text",
+      "required": true
+    },
+    "scores": {
+      "type": "text"
+    },
+    "globalScore": {
+      "type": "text"
+    },
+    "personalNote": {
+      "type": "text"
+    }
+  }
+}

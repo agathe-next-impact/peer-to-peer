@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "personal_goals",
+  "info": {
+    "singularName": "personal-goal",
+    "pluralName": "personal-goals",
+    "displayName": "Objectif personnel"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "horizon": {
+      "type": "enumeration",
+      "enum": ["short_term", "medium_term", "long_term"],
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["not_started", "in_progress", "completed", "abandoned"],
+      "default": "not_started"
+    },
+    "progress": {
+      "type": "integer",
+      "min": 0,
+      "max": 100,
+      "default": 0
+    },
+    "targetDate": {
+      "type": "date"
+    },
+    "milestones": {
+      "type": "json"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "personal_notebooks",
+  "info": {
+    "singularName": "personal-notebook",
+    "pluralName": "personal-notebooks",
+    "displayName": "Carnet de bord"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "owner": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "title": {
+      "type": "text",
+      "required": true
+    },
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "mood": {
+      "type": "text"
+    },
+    "tags": {
+      "type": "json"
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    }
+  }
+}

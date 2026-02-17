@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recovery_profiles",
+  "info": {
+    "singularName": "recovery-profile",
+    "pluralName": "recovery-profiles",
+    "displayName": "Profil de rétablissement"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "owner": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "selfDeterminedNeeds": {
+      "type": "text"
+    },
+    "strengths": {
+      "type": "text"
+    },
+    "recoveryStage": {
+      "type": "text"
+    },
+    "preferences": {
+      "type": "text"
+    },
+    "lastUpdated": {
+      "type": "datetime"
+    }
+  }
+}
