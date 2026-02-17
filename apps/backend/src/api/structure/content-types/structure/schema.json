@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "structures",
+  "info": {
+    "singularName": "structure",
+    "pluralName": "structures",
+    "displayName": "Structure (Annuaire)"
+  },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "name": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "name", "required": true },
+    "type": { "type": "enumeration", "enum": ["public", "association", "private", "community"], "required": true },
+    "description": { "type": "blocks", "required": true },
+    "address": { "type": "component", "component": "location.address", "required": true },
+    "coordinates": { "type": "component", "component": "location.coordinates", "required": true },
+    "phone": { "type": "string" },
+    "email": { "type": "email" },
+    "website": { "type": "string" },
+    "openingHours": { "type": "component", "component": "schedule.opening-slot", "repeatable": true },
+    "services": { "type": "relation", "relation": "manyToMany", "target": "api::service-type.service-type" },
+    "coverImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "isVerified": { "type": "boolean", "default": false, "required": true },
+    "submittedBy": { "type": "relation", "relation": "manyToOne", "target": "api::contributor-profile.contributor-profile" }
+  }
+}

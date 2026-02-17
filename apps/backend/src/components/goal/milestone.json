@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_goal_milestones",
+  "info": { "displayName": "Jalon d'objectif", "icon": "flag" },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "isCompleted": { "type": "boolean", "default": false },
+    "completedAt": { "type": "datetime" },
+    "note": { "type": "text" }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_assessment_questions",
+  "info": { "displayName": "Question d'évaluation", "icon": "help-circle" },
+  "attributes": {
+    "questionId": { "type": "string", "required": true },
+    "text": { "type": "text", "required": true },
+    "type": {
+      "type": "enumeration",
+      "enum": ["likert_5", "likert_7", "yes_no", "numeric", "text"],
+      "required": true
+    },
+    "dimension": { "type": "string", "required": true },
+    "order": { "type": "integer", "required": true },
+    "isRequired": { "type": "boolean", "default": true }
+  }
+}

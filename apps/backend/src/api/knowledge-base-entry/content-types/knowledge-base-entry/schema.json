@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "knowledge_base_entries",
+  "info": {
+    "singularName": "knowledge-base-entry",
+    "pluralName": "knowledge-base-entries",
+    "displayName": "Ressource (Base de connaissances)"
+  },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "title", "required": true },
+    "content": { "type": "blocks", "required": true },
+    "category": { "type": "relation", "relation": "manyToOne", "target": "api::knowledge-category.knowledge-category" },
+    "tags": { "type": "relation", "relation": "manyToMany", "target": "api::tag.tag" },
+    "difficulty": { "type": "enumeration", "enum": ["beginner", "intermediate", "advanced"] },
+    "coverImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "seoMeta": { "type": "component", "component": "shared.seo-meta", "repeatable": false }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_location_addresses",
+  "info": { "displayName": "Adresse", "icon": "map-pin" },
+  "attributes": {
+    "street": { "type": "string" },
+    "postalCode": { "type": "string" },
+    "city": { "type": "string", "required": true },
+    "department": { "type": "string" },
+    "region": { "type": "string" },
+    "country": { "type": "string", "default": "France" }
+  }
+}

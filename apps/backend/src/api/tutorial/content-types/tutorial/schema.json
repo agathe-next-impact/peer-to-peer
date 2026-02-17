@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tutorials",
+  "info": {
+    "singularName": "tutorial",
+    "pluralName": "tutorials",
+    "displayName": "Tutoriel"
+  },
+  "options": { "draftAndPublish": true },
+  "attributes": {
+    "title": { "type": "string", "required": true },
+    "slug": { "type": "uid", "targetField": "title", "required": true },
+    "description": { "type": "text", "required": true },
+    "steps": { "type": "component", "component": "tutorial.step", "repeatable": true, "required": true },
+    "category": { "type": "relation", "relation": "manyToOne", "target": "api::knowledge-category.knowledge-category" },
+    "tags": { "type": "relation", "relation": "manyToMany", "target": "api::tag.tag" },
+    "coverImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] }
+  }
+}

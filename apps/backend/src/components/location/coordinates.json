@@ -1,0 +1,8 @@
+{
+  "collectionName": "components_location_coordinates",
+  "info": { "displayName": "Coordonnées GPS", "icon": "globe" },
+  "attributes": {
+    "latitude": { "type": "decimal", "required": true },
+    "longitude": { "type": "decimal", "required": true }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_tutorial_steps",
+  "info": { "displayName": "Étape de tutoriel", "icon": "list" },
+  "attributes": {
+    "order": { "type": "integer", "required": true },
+    "title": { "type": "string", "required": true },
+    "content": { "type": "blocks" },
+    "image": { "type": "media", "multiple": false, "allowedTypes": ["images"] }
+  }
+}

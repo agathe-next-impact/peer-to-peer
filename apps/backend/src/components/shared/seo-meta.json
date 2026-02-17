@@ -1,0 +1,10 @@
+{
+  "collectionName": "components_shared_seo_metas",
+  "info": { "displayName": "SEO Meta", "icon": "search" },
+  "attributes": {
+    "metaTitle": { "type": "string" },
+    "metaDescription": { "type": "text", "maxLength": 160 },
+    "ogImage": { "type": "media", "multiple": false, "allowedTypes": ["images"] },
+    "canonicalUrl": { "type": "string" }
+  }
+}

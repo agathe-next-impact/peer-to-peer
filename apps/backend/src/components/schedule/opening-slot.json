@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_schedule_opening_slots",
+  "info": { "displayName": "Créneau d'ouverture", "icon": "clock" },
+  "attributes": {
+    "dayOfWeek": {
+      "type": "enumeration",
+      "enum": ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"],
+      "required": true
+    },
+    "openTime": { "type": "time", "required": true },
+    "closeTime": { "type": "time", "required": true },
+    "note": { "type": "string" }
+  }
+}
